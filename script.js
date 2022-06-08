@@ -1,10 +1,12 @@
-var words = ["программа", "макака", "прекрасный", "оладушек"];
+var words = ["программа", "макака", "прекрасный", "оладушек", "фронтенд", "оккупант",
+"редиска", "горох", "лук", "хинкали"];
 var word = words[Math.floor(Math.random() * words.length)];
 var answerArray = [];
 for (var i = 0; i < word.length; i++) {
     answerArray[i] = "_";
 }
 var remainingLetters = word.length;
+
 while (remainingLetters > 0) {
     alert(answerArray.join(" "));
     var guess = prompt("Угадайте букву или нажмите Отмена для выхода из игры");
@@ -17,7 +19,7 @@ while (remainingLetters > 0) {
             if(word[j] === guess) {
                 answerArray[j] = guess;
                 remainingLetters--;
-            }
+            } 
         }
     }
 }
