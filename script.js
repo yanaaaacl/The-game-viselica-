@@ -17,9 +17,10 @@ while (remainingLetters > 0) {
     } else {
         for (var j = 0; j < word.length; j++) {
             if(word[j] === guess) {
+                
                 answerArray[j] = guess;
                 remainingLetters--;
-            } 
+            }
         }
     }
 }
