@@ -1,12 +1,7 @@
-var leftOffset = 0;
-var moveHeading = function(){
-    $("#heading").offset({ left: leftOffset });
-    leftOffset++;
-    if (leftOffset > 200) {
-        leftOffset = 0;
-    }
+var clickHandler = function(event){
+    alert("Клик! " + event.pageX + " " + event.pageY);
 };
-setInterval (moveHeading, 30);
+$("h1").click(clickHandler);
 
 
     
