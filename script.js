@@ -1,7 +1,9 @@
-var doHomeWorkAlarm = function() {
-    alert("Пора делать домашку!");
+var counter = 1;
+var printMessage = function(){
+    alert("You're watching in console " + counter + "sec");
+    counter++;
 };
-var timeoutId = setTimeout(doHomeWorkAlarm, 60000);
-clearTimeout(timeoutId);
+var intervalId = setInterval(printMessage, 1000);
+clearInterval(intervalId);
 
     
