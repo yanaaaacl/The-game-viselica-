@@ -19,13 +19,16 @@ var getDistanceHint = function(distance) {
         return "Тепло";
     }else if (distance < 160) {
         return "Холодно";
+    }else if (distance < 200) {
+        return "Очень-очень холодно";
     }else {
         return "Замерзнешь!";
+        
     }
 };
 
-var width = 400;
-var height = 400;
+var width = 800;
+var height = 800;
 var clicks = 0;
 
 var target = {
@@ -43,6 +46,14 @@ var distance = getDistance(event, target);
 var distanceHint = getDistanceHint(distance);
 
 $("#distance").text(distanceHint);
+
+if (getDistanceHint > 10){
+    alert("Клик:" + clicks);
+}
+
+if (clicks > 5) {
+    alert("Конец игры");
+}
 
 if (distance < 8) {
     alert("Клад найден! Сделано кликов: " + clicks);
